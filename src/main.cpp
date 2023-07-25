@@ -1,3 +1,7 @@
+// project: Templates
+// name: Amitai Shmeeda
+// Date: 11 June 2023
+
 #include <iostream>
 #include <exception>
 #include "PriorityQueue.h"

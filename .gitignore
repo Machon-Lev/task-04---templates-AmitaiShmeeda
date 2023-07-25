@@ -1,0 +1,22 @@
+# Ignore build output directories
+build/
+out/
+
+# Ignore Visual Studio project files
+*.vcxproj
+*.vcxproj.filters
+*.sln
+*.vcxproj.user
+*.vcxproj.user.*
+
+# Ignore CMake generated files
+CMakeFiles/
+CMakeCache.txt
+CMakeScripts/
+CMakeTmp/
+Makefile
+cmake_install.cmake
+install_manifest.txt
+
+# Ignore Visual Studio temporary files
+.vs/

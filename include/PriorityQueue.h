@@ -1,19 +1,34 @@
 #pragma once
-
 #include <iostream>
 #include <list>
 #include <exception>
 
-
-// any templates?
+template <typename T>
 class PriorityQueue {
-
 public:
-
-	// You need to complete the implement : 
-	void push(const T& t);
-	T poll();
+    void push(const T& t);
+    T poll();
 
 private:
-	// add relevant data members
+    std::list<T> data;
 };
+
+template <typename T>
+void PriorityQueue<T>::push(const T& t) {
+    typename std::list<T>::iterator it = data.begin();
+    while (it != data.end() && t < *it) {
+        ++it;
+    }
+    data.insert(it, t);
+}
+
+template <typename T>
+T PriorityQueue<T>::poll() {
+    if (data.empty()) {
+        throw std::exception("PriorityQueue empty!");
+    }
+
+    T frontElement = data.front();
+    data.pop_front();
+    return frontElement;
+}
